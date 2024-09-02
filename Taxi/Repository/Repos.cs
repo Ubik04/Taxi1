@@ -44,7 +44,7 @@ public class TaxiRepository
         using (var connection = _databaseService.CreateConnection())
         {
             await connection.ExecuteAsync(sqlUpdate, new { EndTime = DateTime.UtcNow, DistanceTraveled = distanceTraveled, SessionId = sessionId });
-            var session = await connection.QuerySingleOrDefaultAsync<TaxiSession>(sqlSelect, new { SessionId = sessionId });
+            var session = await connection.QuerySingleAsync<TaxiSession>(sqlSelect, new { SessionId = sessionId });
 
             if (session == null || session.EndTime == null) return null;
 
