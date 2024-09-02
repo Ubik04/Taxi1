@@ -10,7 +10,7 @@ namespace Taxi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TaxiController : ControllerBase
+    public class TaxiController : Controller
     {
         private readonly TaxiRepository _taxiRepository;
 
