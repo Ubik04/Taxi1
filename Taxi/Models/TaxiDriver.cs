@@ -1,4 +1,6 @@
-﻿namespace Taxi.Models
+﻿using System;
+
+namespace Taxi.Models
 {
     public class TaxiDriver
     {
@@ -9,5 +11,7 @@
         public string License { get; set; }
         public string Car { get; set; }
         public string CarNumber { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }
